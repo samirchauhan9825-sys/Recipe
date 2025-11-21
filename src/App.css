@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.navbar,
+.footer-heading {
+  font-family: cursive;
+}
+
+.low-op {
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.banner {
+  height: 500px;
+  background-image: url("https://d1heoihvzm7u4h.cloudfront.net/65f8e31d52e10ca8a5d04ad679f688ce57a80895_November_banner_28_940x300.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.recipe-pic{
+  border-radius: 15px;
+}
+
+.footer-heading {
+  font-family: cursive;
+}
+
+.time {
+  color: rgb(97, 97, 97);
+}
+
+.icon {
+  color: gray;
+}
+
+.steps span {
+  color: gray;
+}
+
+.fa-star {
+  color: yellowgreen;
+}
+
+.footer h5 {
+  font-family: cursive;
+}
+
+.footer p {
+  margin-top: 30px;
+  color: gray;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width:992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:992px) {
+  html {
+    font-size: 12px;
+  }
+}
