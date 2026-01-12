@@ -1,36 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 
-function Home() {
-  let [recipe, setRecipe] = useState([]);
-  let [category, setCategory] = useState([]);
-
-  useEffect(() => {
-    fetch("https://dummyjson.com/recipes/tags")
-      .then((response) => {
-        return response.json();
-      })
-      .then((categorydata) => {
-        setCategory(categorydata);
-        console.log(categorydata);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch("https://dummyjson.com/recipes")
-      .then((response) => {
-        return response.json();
-      })
-      .then((recipedata) => {
-        setRecipe(recipedata.recipes);
-        console.log(recipedata);
-      });
-  }, []);
-
+function Category() {
+      let [recipe, setRecipe] = useState([]);
+      let [category, setCategory] = useState([]);
+    
+      useEffect(() => {
+        fetch("https://dummyjson.com/recipes/tags")
+          .then((response) => {
+            return response.json();
+          })
+          .then((categorydata) => {
+            setCategory(categorydata);
+            console.log(categorydata);
+          });
+      }, []);
+    
+      useEffect(() => {
+        fetch("https://dummyjson.com/recipes")
+          .then((response) => {
+            return response.json();
+          })
+          .then((recipedata) => {
+            setRecipe(recipedata.recipes);
+            console.log(recipedata);
+          });
+      }, []);
   return (
-    <>
-      <Container>
+    <div>
+          <Container>
         <div className="row">
           <div className="col">
             <section className="banner my-4">
@@ -56,7 +55,7 @@ function Home() {
       </Container>
       <div className="container mt-5">
         <div className="row">
-          {/* <div className="col-2">
+          <div className="col-2">
             <h5 className="fs-3 text-secondary">Category</h5>
             {category.map((value, index) => {
               return (
@@ -77,8 +76,8 @@ function Home() {
                 </>
               );
             })}
-          </div> */}
-          <div className="col-12">
+          </div>
+          <div className="col-10">
             <div className="row">
               {recipe.map((value) => {
                 return (
@@ -105,10 +104,9 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
-
-    </>
-  );
+      </div>        
+    </div>
+  )
 }
 
-export default Home;
+export default Category
